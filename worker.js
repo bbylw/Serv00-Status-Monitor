@@ -55,6 +55,8 @@ const INDEX_HTML = `<!DOCTYPE html>
         --ph-orange: #ff9000;
         --ph-black: #000000;
         --ph-dark: #1b1b1b;
+        --ph-gray: #202020;
+        --ph-light: #2e2e2e;
       }
       
       body {
@@ -67,14 +69,26 @@ const INDEX_HTML = `<!DOCTYPE html>
       
       .header {
         background: var(--ph-dark);
-        padding: 1rem;
+        padding: 1.5rem;
         text-align: center;
+        border-bottom: 3px solid var(--ph-orange);
+        box-shadow: 0 2px 10px rgba(255, 144, 0, 0.1);
       }
       
       .logo {
         color: var(--ph-orange);
         font-size: 2rem;
         font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      
+      .logo span {
+        background: var(--ph-orange);
+        color: var(--ph-black);
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
       }
       
       .monitors-container {
@@ -90,20 +104,42 @@ const INDEX_HTML = `<!DOCTYPE html>
         background: var(--ph-dark);
         border-radius: 8px;
         overflow: hidden;
+        border: 1px solid var(--ph-light);
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      
+      .monitor-section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 16px rgba(255, 144, 0, 0.15);
       }
       
       .section-header {
         background: var(--ph-orange);
         color: var(--ph-black);
-        padding: 1rem;
+        padding: 1rem 1.5rem;
         font-weight: bold;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      .section-header::after {
+        content: "▼";
+        font-size: 0.8rem;
+        opacity: 0.8;
       }
       
       .iframe-container {
         width: 100%;
         height: 600px;
         border: none;
-        background: var(--ph-dark);
+        background: var(--ph-gray);
+        padding: 1rem;
+        box-sizing: border-box;
       }
       
       iframe {
@@ -148,7 +184,7 @@ const INDEX_HTML = `<!DOCTYPE html>
   </head>
   <body>
     <div class="header">
-      <div class="logo">s00mon</div>
+      <div class="logo">s00<span>mon</span></div>
       <div>Serv00 Status Monitor</div>
     </div>
     
