@@ -46,5 +46,110 @@ function getIndexPage() {
 
 const INDEX_HTML = `<!DOCTYPE html>
 <html lang="zh-CN">
-... // 这里是上面的 index.html 内容
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>s00mon - Serv00 Status Monitor</title>
+    <style>
+      :root {
+        --ph-orange: #ff9000;
+        --ph-black: #000000;
+        --ph-dark: #1b1b1b;
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--ph-black);
+        color: #fff;
+        font-family: Arial, sans-serif;
+      }
+      
+      .header {
+        background: var(--ph-dark);
+        padding: 1rem;
+        text-align: center;
+      }
+      
+      .logo {
+        color: var(--ph-orange);
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      
+      .monitors-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .monitor-section {
+        background: var(--ph-dark);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      
+      .section-header {
+        background: var(--ph-orange);
+        color: var(--ph-black);
+        padding: 1rem;
+        font-weight: bold;
+      }
+      
+      .iframe-container {
+        width: 100%;
+        height: 600px;
+        border: none;
+        background: var(--ph-dark);
+      }
+      
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        filter: brightness(1.2) contrast(1.1);
+      }
+      
+      /* 针对 IP 检测页面的特殊优化 */
+      .ip-monitor iframe {
+        background-color: #1f1f1f;
+        filter: brightness(1.4) contrast(1.2);
+      }
+      
+      @media (min-width: 768px) {
+        .monitors-container {
+          flex-direction: row;
+        }
+        
+        .monitor-section {
+          flex: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">s00mon</div>
+      <div>Serv00 Status Monitor</div>
+    </div>
+    
+    <div class="monitors-container">
+      <div class="monitor-section ip-monitor">
+        <div class="section-header">IP 可用性检测</div>
+        <div class="iframe-container">
+          <iframe src="https://ss.botai.us.kg/" frameborder="0"></iframe>
+        </div>
+      </div>
+      
+      <div class="monitor-section">
+        <div class="section-header">服务器性能监控</div>
+        <div class="iframe-container">
+          <iframe src="https://ssss.nyc.mn/" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>`; 

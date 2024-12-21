@@ -57,12 +57,20 @@
         width: 100%;
         height: 600px;
         border: none;
+        background: var(--ph-dark);
       }
 
       iframe {
         width: 100%;
         height: 100%;
         border: none;
+        filter: brightness(1.2) contrast(1.1);
+      }
+
+      /* 针对 IP 检测页面的特殊优化 */
+      .ip-monitor iframe {
+        background-color: #1f1f1f;
+        filter: brightness(1.4) contrast(1.2);
       }
 
       @media (min-width: 768px) {
@@ -83,7 +91,7 @@
     </div>
 
     <div class="monitors-container">
-      <div class="monitor-section">
+      <div class="monitor-section ip-monitor">
         <div class="section-header">IP 可用性检测</div>
         <div class="iframe-container">
           <iframe src="https://ss.botai.us.kg/" frameborder="0"></iframe>
