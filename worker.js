@@ -116,23 +116,24 @@ const INDEX_HTML = `<!DOCTYPE html>
       /* 针对 IP 检测页面的特殊优化 */
       .ip-monitor iframe {
         background-color: #1f1f1f;
-        filter: brightness(1.6) contrast(1.3) saturate(1.1);
+        filter: brightness(1.6) contrast(1.3);
       }
       
       /* 添加额外的样式来优化表格显示 */
       .ip-monitor {
-        background: #242424;
+        background: var(--ph-dark);
       }
       
       .ip-monitor .iframe-container {
-        background: #242424;
+        background: var(--ph-dark);
         padding: 10px;
       }
       
       /* 确保 iframe 内容完全可见 */
       .ip-monitor iframe {
-        background: #242424;
+        background: var(--ph-dark);
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        opacity: 0.9;
       }
       
       @media (min-width: 768px) {
