@@ -171,6 +171,56 @@ const INDEX_HTML = `<!DOCTYPE html>
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
       }
       
+      /* 添加数据源链接样式 */
+      .data-sources {
+        padding: 1rem 2rem;
+        text-align: center;
+        background: var(--ph-dark);
+        margin-bottom: 2rem;
+        border-bottom: 1px solid var(--ph-light);
+      }
+      
+      .data-sources-title {
+        color: var(--ph-orange);
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+      
+      .source-links {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      
+      .source-link {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        background: var(--ph-black);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        border: 1px solid var(--ph-light);
+      }
+      
+      .source-link:hover {
+        background: var(--ph-orange);
+        color: var(--ph-black);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255, 144, 0, 0.2);
+      }
+      
+      .source-link i {
+        margin-right: 0.5rem;
+        color: var(--ph-orange);
+      }
+      
+      .source-link:hover i {
+        color: var(--ph-black);
+      }
+      
       @media (min-width: 768px) {
         .monitors-container {
           flex-direction: row;
@@ -186,6 +236,18 @@ const INDEX_HTML = `<!DOCTYPE html>
     <div class="header">
       <div class="logo">s00<span>mon</span></div>
       <div>Serv00 Status Monitor</div>
+    </div>
+    
+    <div class="data-sources">
+      <div class="data-sources-title">🔗 数据来源</div>
+      <div class="source-links">
+        <a href="https://ss.botai.us.kg/" target="_blank" class="source-link">
+          <i>🔍</i>IP 可用性检测源
+        </a>
+        <a href="https://ssss.nyc.mn/" target="_blank" class="source-link">
+          <i>📊</i>性能监控数据源
+        </a>
+      </div>
     </div>
     
     <div class="monitors-container">
