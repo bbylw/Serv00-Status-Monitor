@@ -116,7 +116,7 @@ const INDEX_HTML = `<!DOCTYPE html>
       /* 针对 IP 检测页面的特殊优化 */
       .ip-monitor iframe {
         background-color: #1f1f1f;
-        filter: brightness(1.6) contrast(1.3);
+        filter: brightness(1.6) contrast(1.3) grayscale(1) brightness(2);
       }
       
       /* 添加额外的样式来优化表格显示 */
@@ -127,6 +127,7 @@ const INDEX_HTML = `<!DOCTYPE html>
       .ip-monitor .iframe-container {
         background: var(--ph-dark);
         padding: 10px;
+        color: #ffffff;
       }
       
       /* 确保 iframe 内容完全可见 */
@@ -134,6 +135,7 @@ const INDEX_HTML = `<!DOCTYPE html>
         background: var(--ph-dark);
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
         opacity: 0.9;
+        mix-blend-mode: lighten;
       }
       
       @media (min-width: 768px) {
