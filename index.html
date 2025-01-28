@@ -7,18 +7,40 @@
     <style>
       :root {
         --ph-orange: #ff9000;
-        --ph-black: #333333;
-        --ph-dark: #ffffff;
-        --ph-gray: #f5f5f5;
-        --ph-light: #ffffff;
+        /* 浅色主题变量 */
+        --ph-black-light: #333333;
+        --ph-dark-light: #ffffff;
+        --ph-gray-light: #f5f5f5;
+        --ph-light-light: #ffffff;
+        /* 深色主题变量 */
+        --ph-black-dark: #000000;
+        --ph-dark-dark: #1b1b1b;
+        --ph-gray-dark: #202020;
+        --ph-light-dark: #2e2e2e;
+        /* 当前主题变量 */
+        --ph-black: var(--ph-black-light);
+        --ph-dark: var(--ph-dark-light);
+        --ph-gray: var(--ph-gray-light);
+        --ph-light: var(--ph-light-light);
+        --text-color: var(--ph-black-light);
+      }
+
+      /* 深色主题 */
+      [data-theme="dark"] {
+        --ph-black: var(--ph-black-dark);
+        --ph-dark: var(--ph-dark-dark);
+        --ph-gray: var(--ph-gray-dark);
+        --ph-light: var(--ph-light-dark);
+        --text-color: #ffffff;
       }
 
       body {
         margin: 0;
         padding: 0;
         background: var(--ph-dark);
-        color: var(--ph-black);
+        color: var(--text-color);
         font-family: Arial, sans-serif;
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
 
       .header {
@@ -27,6 +49,35 @@
         text-align: center;
         border-bottom: 3px solid var(--ph-orange);
         box-shadow: 0 2px 10px rgba(255, 144, 0, 0.1);
+        position: relative;
+      }
+
+      /* 主题切换按钮样式 */
+      .theme-toggle {
+        position: absolute;
+        right: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: var(--ph-orange);
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        color: var(--ph-black);
+        cursor: pointer;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .theme-toggle:hover {
+        opacity: 0.9;
+        transform: translateY(-50%) scale(1.05);
+      }
+
+      .theme-toggle i {
+        font-size: 1.2rem;
       }
 
       .logo {
@@ -190,6 +241,9 @@
     <div class="header">
       <div class="logo">s00<span>mon</span></div>
       <div>Serv00 Status Monitor</div>
+      <button class="theme-toggle" onclick="toggleTheme()">
+        <i>🌓</i>切换主题
+      </button>
     </div>
 
     <div class="data-sources">
@@ -219,5 +273,26 @@
         </div>
       </div>
     </div>
+
+    <script>
+      // 主题切换功能
+      function toggleTheme() {
+        const body = document.documentElement;
+        const currentTheme = body.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        body.setAttribute('data-theme', newTheme);
+        
+        // 保存主题偏好到本地存储
+        localStorage.setItem('theme', newTheme);
+      }
+
+      // 页面加载时恢复用户的主题偏好
+      document.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+      });
+    </script>
   </body>
 </html>
