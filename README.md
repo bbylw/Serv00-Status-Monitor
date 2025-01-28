@@ -4,6 +4,9 @@
 
 该项目提供了 Serv00 服务器的实时状态监控面板，集成了 IP 可用性检测和服务器性能监控两大功能。采用美化后的 Pornhub 风格设计，为用户提供直观的服务器状态展示界面。
 
+![Serv00.png](https://github.com/bbylw/Serv00-Status-Monitor/raw/59fe4287e519d35cbfc989150546e6e4f2e4ba5c/Serv00.png)
+
+
 ## 🌐 项目特点
 
 - 🎨 Pornhub 风格黑橙配色主题
