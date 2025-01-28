@@ -7,22 +7,22 @@
     <style>
       :root {
         --ph-orange: #ff9000;
-        --ph-black: #000000;
-        --ph-dark: #1b1b1b;
-        --ph-gray: #202020;
-        --ph-light: #2e2e2e;
+        --ph-black: #333333;
+        --ph-dark: #ffffff;
+        --ph-gray: #f5f5f5;
+        --ph-light: #ffffff;
       }
 
       body {
         margin: 0;
         padding: 0;
-        background: var(--ph-black);
-        color: #fff;
+        background: var(--ph-dark);
+        color: var(--ph-black);
         font-family: Arial, sans-serif;
       }
 
       .header {
-        background: var(--ph-dark);
+        background: var(--ph-gray);
         padding: 1.5rem;
         text-align: center;
         border-bottom: 3px solid var(--ph-orange);
@@ -55,7 +55,7 @@
       }
 
       .monitor-section {
-        background: var(--ph-dark);
+        background: var(--ph-gray);
         border-radius: 8px;
         overflow: hidden;
         border: 1px solid var(--ph-light);
@@ -105,23 +105,23 @@
 
       /* 针对 IP 检测页面的特殊优化 */
       .ip-monitor iframe {
-        background-color: #1f1f1f;
+        background-color: #f5f5f5;
         filter: brightness(1.2);
       }
 
       /* 添加额外的样式来优化表格显示 */
       .ip-monitor {
-        background: #242424;
+        background: #f5f5f5;
       }
 
       .ip-monitor .iframe-container {
-        background: #242424;
+        background: #f5f5f5;
         padding: 10px;
       }
 
       /* 确保 iframe 内容完全可见 */
       .ip-monitor iframe {
-        background: #242424;
+        background: #f5f5f5;
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
       }
 
@@ -129,7 +129,7 @@
       .data-sources {
         padding: 1rem 2rem;
         text-align: center;
-        background: var(--ph-dark);
+        background: var(--ph-gray);
         margin-bottom: 2rem;
         border-bottom: 1px solid var(--ph-light);
       }
