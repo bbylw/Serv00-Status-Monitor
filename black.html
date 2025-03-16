@@ -18,34 +18,34 @@
         padding: 0;
         background: var(--ph-black);
         color: #fff;
-        font-family: Arial， sans-serif;
+        font-family: Arial, sans-serif;
       }
 
-      。header {
+      .header {
         background: var(--ph-dark);
         padding: 1.5rem;
         text-align: center;
         border-bottom: 3px solid var(--ph-orange);
-        box-shadow: 0 2px 10px rgba(255， 144， 0， 0.1);
+        box-shadow: 0 2px 10px rgba(255, 144, 0, 0.1);
       }
 
-      。logo {
+      .logo {
         color: var(--ph-orange);
         font-size: 2rem;
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 1px;
-        text-shadow: 2px 2px 4px rgba(0， 0， 0， 0.3);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       }
 
-      。logo span {
+      .logo span {
         background: var(--ph-orange);
         color: var(--ph-black);
         padding: 0.2rem 0.5rem;
         border-radius: 4px;
       }
 
-      。monitors-container {
+      .monitors-container {
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -54,21 +54,21 @@
         margin: 0 auto;
       }
 
-      。monitor-section {
+      .monitor-section {
         background: var(--ph-dark);
         border-radius: 8px;
         overflow: hidden;
         border: 1px solid var(--ph-light);
         transition: transform 0.3s ease;
-        box-shadow: 0 4px 12px rgba(0， 0， 0， 0.2);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       }
 
-      。monitor-section:hover {
+      .monitor-section:hover {
         transform: translateY(-5px);
-        box-shadow: 0 6px 16px rgba(255， 144， 0， 0.15);
+        box-shadow: 0 6px 16px rgba(255, 144, 0, 0.15);
       }
 
-      。section-header {
+      .section-header {
         background: var(--ph-orange);
         color: var(--ph-black);
         padding: 1rem 1.5rem;
@@ -81,13 +81,13 @@
         justify-content: space-between;
       }
 
-      。section-header::after {
+      .section-header::after {
         content: "▼";
         font-size: 0.8rem;
         opacity: 0.8;
       }
 
-      。iframe-container {
+      .iframe-container {
         width: 100%;
         height: 600px;
         border: none;
@@ -104,29 +104,29 @@
       }
 
       /* 针对 IP 检测页面的特殊优化 */
-      。ip-monitor iframe {
+      .ip-monitor iframe {
         background-color: #1f1f1f;
         filter: brightness(1.2);
       }
 
       /* 添加额外的样式来优化表格显示 */
-      。ip-monitor {
+      .ip-monitor {
         background: #242424;
       }
 
-      。ip-monitor 。iframe-container {
+      .ip-monitor .iframe-container {
         background: #242424;
         padding: 10px;
       }
 
       /* 确保 iframe 内容完全可见 */
-      。ip-monitor iframe {
+      .ip-monitor iframe {
         background: #242424;
-        box-shadow: 0 0 10px rgba(255， 255， 255， 0.1);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
       }
 
       /* 添加数据源链接样式 */
-      。data-sources {
+      .data-sources {
         padding: 1rem 2rem;
         text-align: center;
         background: var(--ph-dark);
@@ -134,21 +134,21 @@
         border-bottom: 1px solid var(--ph-light);
       }
 
-      。data-sources-title {
+      .data-sources-title {
         color: var(--ph-orange);
         font-size: 1.2rem;
         margin-bottom: 1rem;
         font-weight: bold;
       }
 
-      。source-links {
+      .source-links {
         display: flex;
         gap: 1rem;
         justify-content: center;
         flex-wrap: wrap;
       }
 
-      。source-link {
+      .source-link {
         display: inline-block;
         padding: 0.8rem 1.5rem;
         background: var(--ph-black);
@@ -159,28 +159,28 @@
         border: 1px solid var(--ph-light);
       }
 
-      。source-link:hover {
+      .source-link:hover {
         background: var(--ph-orange);
         color: var(--ph-black);
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(255， 144， 0， 0.2);
+        box-shadow: 0 4px 12px rgba(255, 144, 0, 0.2);
       }
 
-      。source-link i {
+      .source-link i {
         margin-right: 0.5rem;
         color: var(--ph-orange);
       }
 
-      。source-link:hover i {
+      .source-link:hover i {
         color: var(--ph-black);
       }
 
       @media (min-width: 768px) {
-        。monitors-container {
+        .monitors-container {
           flex-direction: row;
         }
 
-        。monitor-section {
+        .monitor-section {
           flex: 1;
         }
       }
