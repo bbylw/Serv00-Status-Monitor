@@ -1,7 +1,7 @@
 const CONFIG = {
   title: 's00mon - Serv00 Status Monitor',
   proxyUrls: {
-    ip: 'https://ss.botai.us.kg/',
+    ip: 'https://ss.fkj.pp.ua/',
     status: 'https://ssss.nyc.mn/'
   }
 };
@@ -241,7 +241,7 @@ const INDEX_HTML = `<!DOCTYPE html>
     <div class="data-sources">
       <div class="data-sources-title">🔗 数据来源</div>
       <div class="source-links">
-        <a href="https://ss.botai.us.kg/" target="_blank" class="source-link">
+        <a href="https://ss.fkj.pp.ua/" target="_blank" class="source-link">
           <i>🔍</i>IP 可用性检测源
         </a>
         <a href="https://ssss.nyc.mn/" target="_blank" class="source-link">
@@ -254,7 +254,7 @@ const INDEX_HTML = `<!DOCTYPE html>
       <div class="monitor-section ip-monitor">
         <div class="section-header">IP 可用性检测</div>
         <div class="iframe-container">
-          <iframe src="https://ss.botai.us.kg/" frameborder="0"></iframe>
+          <iframe src="https://ss.fkj.pp.ua/" frameborder="0"></iframe>
         </div>
       </div>
       
